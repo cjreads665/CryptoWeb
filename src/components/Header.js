@@ -2,28 +2,24 @@ import React from 'react'
 import {AppBar,ToolBar,Container,Typography,createTheme,MenuItem,ThemeProvider,Select} from '@mui/material';
 import {useHistory} from 'react-router-dom'
 export default function Header() {
-const theme = createTheme({
+const darkTheme = createTheme({
   typography: {
-
     subtitle1: {
     fontFamily:"'Poppins', sans-serif",
       fontSize: 20,
       fontWeight:'bold',
       cursor: 'pointer',
-      flex:1,
-      color:'gold'
+      color:'gold',
     },
-    darkTheme:{
-    	primary:{
-    		main: '#fff',
-
-    	},type:'dark'
-    }
+    
+},
+		palette: {
+    mode: 'dark',
   },
 });
 	return (
-		<ThemeProvider theme={theme}>
-		<AppBar color='transparent' position='static' variant='darkTheme'>
+		<ThemeProvider theme={darkTheme}>
+		<AppBar color='transparent' position='static'>
 	{/*container makes the navbar responsive*/}
 		<Container sx={{display : 'flex', justifyContent :'space-between'}}>
 		<Typography sx={{ m: 1 }} variant="subtitle1">
