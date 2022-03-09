@@ -1,5 +1,6 @@
 import React from 'react'
 import {AppBar,ToolBar,Container,Typography,createTheme,MenuItem,ThemeProvider,Select} from '@mui/material';
+import {useHistory} from 'react-router-dom'
 export default function Header() {
 const theme = createTheme({
   typography: {
@@ -11,6 +12,12 @@ const theme = createTheme({
       cursor: 'pointer',
       flex:1,
       color:'gold'
+    },
+    darkTheme:{
+    	primary:{
+    		main: '#fff',
+
+    	},type:'dark'
     }
   },
 });
@@ -23,7 +30,7 @@ const theme = createTheme({
 		CryptoWeb
 		</Typography>
 	{/*this is the select menu option*/}
-		<Select variant='outlined'>
+		<Select variant='outlined' defaultValue={`INR`}>
 			<MenuItem value={'INR'}>
 				INR
 			</MenuItem>
