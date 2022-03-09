@@ -23,7 +23,7 @@ const theme = createTheme({
 });
 	return (
 		<ThemeProvider theme={theme}>
-		<AppBar color='transparent' position='static'>
+		<AppBar color='transparent' position='static' variant='darkTheme'>
 	{/*container makes the navbar responsive*/}
 		<Container sx={{display : 'flex', justifyContent :'space-between'}}>
 		<Typography sx={{ m: 1 }} variant="subtitle1">
