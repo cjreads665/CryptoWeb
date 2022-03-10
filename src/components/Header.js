@@ -6,7 +6,7 @@ const darkTheme = createTheme({
   typography: {
     subtitle1: {
     fontFamily:"'Poppins', sans-serif",
-      fontSize: 20,
+      fontSize: 30,
       fontWeight:'bold',
       cursor: 'pointer',
       color:'gold',
@@ -19,14 +19,14 @@ const darkTheme = createTheme({
 });
 	return (
 		<ThemeProvider theme={darkTheme}>
-		<AppBar color='transparent' position='static'>
+		<AppBar color='transparent' position='static' sx={{p:1}}>
 	{/*container makes the navbar responsive*/}
 		<Container sx={{display : 'flex', justifyContent :'space-between'}}>
 		<Typography sx={{ m: 1 }} variant="subtitle1">
 		CryptoWeb
 		</Typography>
 	{/*this is the select menu option*/}
-		<Select variant='outlined' defaultValue={`INR`}>
+		<Select variant='outlined' defaultValue={`INR`} sx={{height:'20%', mt:1}}>
 			<MenuItem value={'INR'}>
 				INR
 			</MenuItem>
