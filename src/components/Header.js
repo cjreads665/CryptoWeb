@@ -1,7 +1,10 @@
 import React from 'react'
 import {AppBar,ToolBar,Container,Typography,createTheme,MenuItem,ThemeProvider,Select} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import {CryptoState} from '../context/CryptoContext'
+
 export default function Header() {
+const {currency, setCurrency} = CryptoState()
 const darkTheme = createTheme({
   typography: {
     subtitle1: {
@@ -19,7 +22,7 @@ const darkTheme = createTheme({
 });
 
 const navigate = useNavigate()
-	
+
 
 	return (
 		<ThemeProvider theme={darkTheme}>

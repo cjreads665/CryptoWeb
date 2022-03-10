@@ -13,7 +13,7 @@ const CryptoContext = ({children}) => {
 			else if(currency==='USD') setSymbol('$')
 	}, [currency])
 	return (
-		<Crypto.Provider>
+		<Crypto.Provider value={{currency,symbol,setCurrency}}>
 			{children}
 		</Crypto.Provider>
 	)
