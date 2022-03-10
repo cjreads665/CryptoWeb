@@ -1,6 +1,6 @@
 import React from 'react'
 import {AppBar,ToolBar,Container,Typography,createTheme,MenuItem,ThemeProvider,Select} from '@mui/material';
-import {useHistory} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 export default function Header() {
 const darkTheme = createTheme({
   typography: {
@@ -17,12 +17,16 @@ const darkTheme = createTheme({
     mode: 'dark',
   },
 });
+
+const navigate = useNavigate()
+	
+
 	return (
 		<ThemeProvider theme={darkTheme}>
 		<AppBar color='transparent' position='static' sx={{p:1}}>
 	{/*container makes the navbar responsive*/}
 		<Container sx={{display : 'flex', justifyContent :'space-between'}}>
-		<Typography sx={{ m: 1 }} variant="subtitle1">
+		<Typography onClick={()=>navigate('/')} sx={{ m: 1 }} variant="subtitle1">
 		CryptoWeb
 		</Typography>
 	{/*this is the select menu option*/}
