@@ -4,6 +4,7 @@ import Header from './components/Header'
 import HomePage from './pages/HomePage'
 import CoinPage from './pages/CoinPage'
 import {makeStyles} from '@mui/styles'
+import CryptoState from './context/CryptoContext'
 function App() {
   const useStyles = makeStyles(()=>({
     App:{
@@ -12,10 +13,7 @@ function App() {
       minHeight: '100vh'
     }
   }))
-
   const classes = useStyles()
-
-
   return (
     <BrowserRouter>
     <div className={classes.App}>

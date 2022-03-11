@@ -23,7 +23,6 @@ const darkTheme = createTheme({
 
 const navigate = useNavigate()
 
-
 	return (
 		<ThemeProvider theme={darkTheme}>
 		<AppBar color='transparent' position='static' sx={{p:1}}>
@@ -33,7 +32,9 @@ const navigate = useNavigate()
 		CryptoWeb
 		</Typography>
 	{/*this is the select menu option*/}
-		<Select variant='outlined' defaultValue={`INR`} sx={{height:'20%', mt:1}}>
+		<Select variant='outlined' defaultValue={`INR`} sx={{height:'20%', mt:1}}
+		onChange={(e)=>setCurrency(e.target.value)}
+		>
 			<MenuItem value={'INR'}>
 				INR
 			</MenuItem>
