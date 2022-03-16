@@ -1,5 +1,6 @@
 import React from 'react'
 import { createTheme, ThemeProvider, Box, Typography} from '@mui/material';
+import Carousal from './Carousal'
 //this is used fo making custom CSS
 /*
 put a picture in the component
@@ -42,6 +43,7 @@ function Banner() {
 			Track your Crypto Holdings for FREE
 		</Typography>
 		</Box>
+		<Carousal/>
 		</ThemeProvider>
 	)
 }
